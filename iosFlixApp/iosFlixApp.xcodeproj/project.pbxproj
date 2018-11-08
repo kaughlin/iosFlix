@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10262C572193F6C400DE2DB2 /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10262C562193F6C400DE2DB2 /* MoviesViewController.m */; };
 		109A3D77217BCF3800B92077 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 109A3D76217BCF3800B92077 /* AppDelegate.m */; };
-		109A3D7A217BCF3800B92077 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109A3D79217BCF3800B92077 /* ViewController.m */; };
 		109A3D7D217BCF3800B92077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109A3D7B217BCF3800B92077 /* Main.storyboard */; };
 		109A3D7F217BCF3B00B92077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 109A3D7E217BCF3B00B92077 /* Assets.xcassets */; };
 		109A3D82217BCF3B00B92077 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109A3D80217BCF3B00B92077 /* LaunchScreen.storyboard */; };
@@ -35,11 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10262C552193F6C400DE2DB2 /* MoviesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesViewController.h; sourceTree = "<group>"; };
+		10262C562193F6C400DE2DB2 /* MoviesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesViewController.m; sourceTree = "<group>"; };
 		109A3D72217BCF3800B92077 /* iosFlixApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosFlixApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		109A3D75217BCF3800B92077 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		109A3D76217BCF3800B92077 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		109A3D78217BCF3800B92077 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		109A3D79217BCF3800B92077 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		109A3D7C217BCF3800B92077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		109A3D7E217BCF3B00B92077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		109A3D81217BCF3B00B92077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +78,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10262C582193F7A500DE2DB2 /* View Contollers */ = {
+			isa = PBXGroup;
+			children = (
+				10262C552193F6C400DE2DB2 /* MoviesViewController.h */,
+				10262C562193F6C400DE2DB2 /* MoviesViewController.m */,
+			);
+			path = "View Contollers";
+			sourceTree = "<group>";
+		};
+		10262C592193F7B200DE2DB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		10262C5A2193F7B900DE2DB2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		109A3D69217BCF3800B92077 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +124,11 @@
 		109A3D74217BCF3800B92077 /* iosFlixApp */ = {
 			isa = PBXGroup;
 			children = (
+				10262C5A2193F7B900DE2DB2 /* Models */,
+				10262C592193F7B200DE2DB2 /* Views */,
+				10262C582193F7A500DE2DB2 /* View Contollers */,
 				109A3D75217BCF3800B92077 /* AppDelegate.h */,
 				109A3D76217BCF3800B92077 /* AppDelegate.m */,
-				109A3D78217BCF3800B92077 /* ViewController.h */,
-				109A3D79217BCF3800B92077 /* ViewController.m */,
 				109A3D7B217BCF3800B92077 /* Main.storyboard */,
 				109A3D7E217BCF3B00B92077 /* Assets.xcassets */,
 				109A3D80217BCF3B00B92077 /* LaunchScreen.storyboard */,
@@ -262,9 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				109A3D7A217BCF3800B92077 /* ViewController.m in Sources */,
 				109A3D85217BCF3B00B92077 /* main.m in Sources */,
 				109A3D77217BCF3800B92077 /* AppDelegate.m in Sources */,
+				10262C572193F6C400DE2DB2 /* MoviesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
