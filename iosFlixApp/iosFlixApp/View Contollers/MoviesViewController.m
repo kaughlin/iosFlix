@@ -8,8 +8,9 @@
 
 #import "MoviesViewController.h"
 
-@interface MoviesViewController ()
+@interface MoviesViewController () <UITableViewDataSource ,UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *movies;
 
 @end
@@ -18,6 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     // Do any additional setup after loading the view.
     //network request
     //set up
@@ -42,11 +46,27 @@
             }
             // TODO: Store the movies in a property to use elsewhere
             // TODO: Reload your table view data
+            [self.tableView reloadData];
         }
     }];
     [task resume];
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.movies.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    // in java it would look like
+    //UITableViewCell *cell = UITableViewCell();
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    
+//    NSLog(@"%@", [NSString stringWithFormat: @"row: %d, section %d", indexPath.row, indexPath.section]);
+    NSDictionary *movie = self.movies[indexPath.row];
+    cell.textLabel.text =  movie[@"title"];
+//    cell.textLabel.text = [NSString stringWithFormat: @"row: %d, section %d", indexPath.row, indexPath.section];
+    return cell;
+}
 /*
 #pragma mark - Navigation
 
