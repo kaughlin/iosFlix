@@ -7,7 +7,7 @@
 //
 
 #import "MoviesViewController.h"
-
+#import "MovieCell.h"
 @interface MoviesViewController () <UITableViewDataSource ,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -59,11 +59,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // in java it would look like
     //UITableViewCell *cell = UITableViewCell();
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
-    
+    //UITableViewCell *cell = [[UITableViewCell alloc] init];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"MovieCell"];
+    MovieCell *cell = [tableView dequeueReusableCellWithIdentifier: @"MovieCell"];
 //    NSLog(@"%@", [NSString stringWithFormat: @"row: %d, section %d", indexPath.row, indexPath.section]);
     NSDictionary *movie = self.movies[indexPath.row];
-    cell.textLabel.text =  movie[@"title"];
+    cell.titleLabel.text =  movie[@"title"];
+    cell.synopsisLabel.text = movie[@"overview"];
+    //cell.textLabel.text =  movie[@"title"];
 //    cell.textLabel.text = [NSString stringWithFormat: @"row: %d, section %d", indexPath.row, indexPath.section];
     return cell;
 }
