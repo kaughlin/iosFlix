@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movies View Controller-->
+        <!--Movies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MoviesViewController" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="187.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qTl-rP-KAw">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qTl-rP-KAw">
                                                     <rect key="frame" x="15" y="11" width="112" height="177"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -53,6 +53,7 @@
                                             <outlet property="posterView" destination="qTl-rP-KAw" id="Drs-80-jBE"/>
                                             <outlet property="synopsisLabel" destination="GdS-pl-v7l" id="TJp-mL-GMU"/>
                                             <outlet property="titleLabel" destination="C54-kb-Raw" id="9tc-fd-ljh"/>
+                                            <segue destination="B7a-lD-Y8x" kind="show" id="AvS-xb-KDK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -61,7 +62,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IdL-ym-32j"/>
+                    <navigationItem key="navigationItem" title="Movies" id="IdL-ym-32j"/>
                     <connections>
                         <outlet property="tableView" destination="NsB-uW-pXf" id="SLZ-IF-rpe"/>
                     </connections>
@@ -69,6 +70,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="941.60000000000002" y="-607.64617691154433"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZBH-4I-jld">
+            <objects>
+                <viewController id="B7a-lD-Y8x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="11K-xc-g5j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YOs-Yb-TZs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5A-Wt-qdv">
+                                        <rect key="frame" x="0.0" y="-64" width="375" height="265"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Rel-Zn-V46"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4D-LD-ZYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660" y="-605.84707646176912"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dMZ-8y-0qm">
